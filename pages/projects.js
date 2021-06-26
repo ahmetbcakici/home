@@ -3,15 +3,42 @@ import Head from "next/head";
 import Navbar from "components/navbar";
 import Footer from "components/footer";
 
-import chember from "public/chember.jpg";
-
 // Manage content here for ease of use.
+
 const PROJECTS = [
   {
     title: "Chember",
+    position: "Co founder and CTO",
     desc: "Connect with streetball communities around you.",
     href: "https://chember.co",
-    photo: chember.src,
+    photo: "/chember.jpg",
+  },
+  {
+    title: "dostman",
+    desc: "Maintain your API development, documentation and experimentation all within your codebase.",
+    href: "https://github.com/egecavusoglu/dostman",
+    photo:
+      "https://pbs.twimg.com/card_img/1407570849436082176/aUBYeaWe?format=jpg&name=small",
+  },
+  {
+    title: "Adresci",
+    desc: "Address generator for residences with Next.js and Tailwind.",
+    href: "https://github.com/egecavusoglu/adresci",
+    photo:
+      "https://pbs.twimg.com/card_img/1406676374786514948/cvNFGB8h?format=jpg&name=small",
+  },
+  {
+    title: "RN Phone Code",
+    desc: "React Native package for country phone codes selection.",
+    href: "https://github.com/egecavusoglu/RNPhoneCodeSelect",
+    photo: "",
+  },
+  {
+    title: "Cameo App",
+    desc: "Lookup movies and get details.",
+    href: "https://github.com/egecavusoglu/CameoApp",
+    photo:
+      "https://pbs.twimg.com/card_img/1408860322199269377/HdZJxfLH?format=jpg&name=small",
   },
 ];
 
@@ -50,15 +77,22 @@ const Projects = (props) => {
 export default Projects;
 
 const Project = ({ data }) => {
-  const { title, desc, href, photo = "" } = data;
+  const {
+    title,
+    desc,
+    href,
+    photo = "",
+    position,
+    fit = "object-cover",
+  } = data;
   return (
     <div className="bg-gray-990 shadow-md hover:scale-101 transition w-52 min-h-64 rounded-md pb-1 overflow-hidden  mb-1">
-      <div className="h-36  bg-gray-300 w-full">
-        {photo && <img src={photo} className="h-full  object-fill" />}
+      <div className="h-min  bg-gray-900 w-full">
+        {photo && <img src={photo} className={`h-max-36 ${fit}`} />}
       </div>
       <div className="p-2 text-gray-400">
         <ProjectLink label={title} href={href} />
-        <p className="text-xs mb-1">co founder and CTO</p>
+        {position && <p className="text-xs mb-1">{position}</p>}
         <p className="text-xs">{desc}</p>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navbar from "components/navbar";
 import Image from "next/image";
-import Woods from "public/intro.jpeg";
+
 import Footer from "components/footer";
 
 export default function Home() {
@@ -25,8 +25,8 @@ export default function Home() {
             Science and lovin' it. I also develop software applications for the
             good and hope they scale to help more people with their daily lives.
           </p>
-          <div className="amk overflow-hidden w-full lg:w-4/5 self-center m-auto my-6">
-            <Image src={Woods} objectFit="fill" placeholder="blur" />
+          <div className="amk overflow-hidden w-full lg:w-4/5 self-center m-auto my-6 rounded-lg">
+            <img src={"/intro.jpeg"} objectFit="fill" />
           </div>
         </div>
       </main>
