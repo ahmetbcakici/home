@@ -34,6 +34,13 @@ const PROJECTS = [
     photo: "",
   },
   {
+    title: "egespress",
+    desc: "Opinionated and powerful template for building API's with Koa.",
+    href: "https://github.com/egecavusoglu/egespress",
+    photo:
+      "https://pbs.twimg.com/card_img/1408872179245060097/m2aMvgUZ?format=jpg&name=small",
+  },
+  {
     title: "Cameo App",
     desc: "Lookup movies and get details.",
     href: "https://github.com/egecavusoglu/CameoApp",
@@ -64,7 +71,7 @@ const Projects = (props) => {
           </p>
           <div className="py-5 flex flex-wrap gap-4 justify-center sm:justify-start ">
             {PROJECTS.map((p) => (
-              <Project data={p} />
+              <Project key={p.href} data={p} />
             ))}
           </div>
         </div>
@@ -77,18 +84,11 @@ const Projects = (props) => {
 export default Projects;
 
 const Project = ({ data }) => {
-  const {
-    title,
-    desc,
-    href,
-    photo = "",
-    position,
-    fit = "object-cover",
-  } = data;
+  const { title, desc, href, photo = "", position } = data;
   return (
     <div className="bg-gray-990 shadow-md hover:scale-101 transition w-52 min-h-64 rounded-md pb-1 overflow-hidden  mb-1">
       <div className="h-min  bg-gray-900 w-full">
-        {photo && <img src={photo} className={`h-max-36 ${fit}`} />}
+        {photo && <img src={photo} className={`h-max-36 object-cover`} />}
       </div>
       <div className="p-2 text-gray-400">
         <ProjectLink label={title} href={href} />
