@@ -18,8 +18,8 @@ export default function Home() {
           <code className="text-blue-400 text-lg">🌎 Hello World!</code>
           <p className="text-gray-300 mt-3">
             Hey there, it's Ege. Welcome to v2 of my website, I am hoping to
-            aggregate my up to date life events, blogs, photography and
-            videography here.
+            aggregate my up to date life, blogs, photography and videography
+            here.
             <div className="mb-3" />
             I'm a senior in Washington University in St Louis studying Computer
             Science and lovin' it. I also develop software applications for the

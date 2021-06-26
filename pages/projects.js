@@ -2,7 +2,8 @@ import React from "react";
 import Head from "next/head";
 import Navbar from "components/navbar";
 import Footer from "components/footer";
-import Image from "next/image";
+
+import chember from "public/chember.jpg";
 
 const Projects = (props) => {
   return (
@@ -29,7 +30,7 @@ const Projects = (props) => {
               title="Chember"
               desc="Connect with streetball communities around you."
               href="https://chember.co"
-              //   photo={"/public/chember.jpg"}
+              photo={chember}
             />
             <Project
               title="Chember"
@@ -61,13 +62,14 @@ export default Projects;
 
 const Project = ({ title, desc, href, photo = "" }) => {
   return (
-    <div className="bg-gray-990 shadow-md hover:scale-101 transition w-52 h-68 rounded-md overflow-hidden  mb-1">
+    <div className="bg-gray-990 shadow-md hover:scale-101 transition w-52 min-h-64 rounded-md pb-1 overflow-hidden  mb-1">
       <div className="h-36  bg-gray-300 w-full">
-        {photo && <Image src={photo} objectFit="fill" layout="fill" />}
+        {photo && <img src={photo.src} className="h-full  object-fill" />}
       </div>
       <div className="p-2 text-gray-400">
         <ProjectLink label={title} href={href} />
-        <p className="text-sm">{desc}</p>
+        <p className="text-xs mb-1">co founder and CTO</p>
+        <p className="text-xs">{desc}</p>
       </div>
     </div>
   );
