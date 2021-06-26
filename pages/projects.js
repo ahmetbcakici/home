@@ -5,6 +5,16 @@ import Footer from "components/footer";
 
 import chember from "public/chember.jpg";
 
+// Manage content here for ease of use.
+const PROJECTS = [
+  {
+    title: "Chember",
+    desc: "Connect with streetball communities around you.",
+    href: "https://chember.co",
+    photo: chember.src,
+  },
+];
+
 const Projects = (props) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-1000">
@@ -26,30 +36,9 @@ const Projects = (props) => {
             Here are some of my notable projects...
           </p>
           <div className="py-5 flex flex-wrap gap-4 justify-center sm:justify-start ">
-            <Project
-              title="Chember"
-              desc="Connect with streetball communities around you."
-              href="https://chember.co"
-              photo={chember}
-            />
-            <Project
-              title="Chember"
-              desc="Connect with streetball communities around you."
-              href="https://chember.co"
-              //   photo={"/public/chember.jpg"}
-            />
-            <Project
-              title="Chember"
-              desc="Connect with streetball communities around you."
-              href="https://chember.co"
-              //   photo={"/public/chember.jpg"}
-            />
-            <Project
-              title="Chember"
-              desc="Connect with streetball communities around you."
-              href="https://chember.co"
-              //   photo={"https://egecavusoglu.tech/img/chember.jpg"}
-            />
+            {PROJECTS.map((p) => (
+              <Project data={p} />
+            ))}
           </div>
         </div>
       </main>
@@ -60,11 +49,12 @@ const Projects = (props) => {
 };
 export default Projects;
 
-const Project = ({ title, desc, href, photo = "" }) => {
+const Project = ({ data }) => {
+  const { title, desc, href, photo = "" } = data;
   return (
     <div className="bg-gray-990 shadow-md hover:scale-101 transition w-52 min-h-64 rounded-md pb-1 overflow-hidden  mb-1">
       <div className="h-36  bg-gray-300 w-full">
-        {photo && <img src={photo.src} className="h-full  object-fill" />}
+        {photo && <img src={photo} className="h-full  object-fill" />}
       </div>
       <div className="p-2 text-gray-400">
         <ProjectLink label={title} href={href} />

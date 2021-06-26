@@ -12,6 +12,7 @@ module.exports = {
           990: "#212121",
         },
         blueGray: colors.blueGray,
+        cyan: colors.cyan,
       },
       scale: {
         101: "1.01",
