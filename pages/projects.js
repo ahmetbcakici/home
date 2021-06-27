@@ -31,7 +31,8 @@ const PROJECTS = [
     title: "RN Phone Code",
     desc: "React Native package for country phone codes selection.",
     href: "https://github.com/egecavusoglu/RNPhoneCodeSelect",
-    photo: "",
+    photo:
+      "https://github.com/egecavusoglu/RNPhoneCodeSelect/raw/master/assets/phone-select-gif.gif",
   },
   {
     title: "egespress",
@@ -69,7 +70,7 @@ const Projects = (props) => {
             <div className="mb-3" />
             Here are some of my notable projects...
           </p>
-          <div className="py-5 flex flex-wrap gap-4 justify-center sm:justify-start ">
+          <div className="py-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-start">
             {PROJECTS.map((p) => (
               <Project key={p.href} data={p} />
             ))}
@@ -86,13 +87,13 @@ export default Projects;
 const Project = ({ data }) => {
   const { title, desc, href, photo = "", position } = data;
   return (
-    <div className="bg-gray-990 shadow-md hover:scale-101 transition w-52 min-h-64 rounded-md pb-1 overflow-hidden  mb-1">
+    <div className="bg-gray-990 shadow-md hover:scale-101 transition w-11/12  min-h-64 rounded-md pb-1 overflow-hidden  mb-1">
       <div className="h-min  bg-gray-900 w-full">
         {photo && <img src={photo} className={`h-max-36 object-cover`} />}
       </div>
       <div className="p-2 text-gray-400">
         <ProjectLink label={title} href={href} />
-        {position && <p className="text-xs mb-1">{position}</p>}
+        {position && <p className="text-xs mb-1 text-blue-200">{position}</p>}
         <p className="text-xs">{desc}</p>
       </div>
     </div>
@@ -103,7 +104,7 @@ const ProjectLink = ({ label, href }) => {
   return (
     <div className="my-1">
       <a
-        className="text-blue-400  "
+        className="text-blue-400"
         href={href}
         target="_blank"
         rel="noopener noreferrer"

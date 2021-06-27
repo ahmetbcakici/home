@@ -37,6 +37,7 @@ const Navbar = (props) => {
       />
     ));
   };
+
   return (
     <nav className="max-w-2xl w-full  px-2 py-2 my-3 flex flex-col sm:flex-row  md:items-center gap-5">
       <button onClick={() => setOpen((o) => !o)} className="h-min">
@@ -46,7 +47,7 @@ const Navbar = (props) => {
         <NavItems />
       </div>
       {open && (
-        <div className={`flex flex-col gap-3 px-1  sm:hidden`}>
+        <div className={`flex flex-col gap-3 px-1 transition-all sm:hidden`}>
           <NavItems />
         </div>
       )}
