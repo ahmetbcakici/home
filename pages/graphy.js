@@ -6,12 +6,14 @@ import Item from "components/social-item";
 const ITEMS = [
   {
     label: "Youtube",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg",
+    // icon: "https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg",
+    icon: "/youtube.svg",
     href: "https://www.youtube.com/channel/UC0h2eS9IiX_u0Fc_3iQRkAQ",
   },
   {
     label: "VSCO",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/3/32/VSCO_Seal.svg",
+    // icon: "https://upload.wikimedia.org/wikipedia/commons/3/32/VSCO_Seal.svg",
+    icon: "/vsco.svg",
     href: "https://vsco.co/egecavusogluu",
   },
 ];

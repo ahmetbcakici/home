@@ -9,14 +9,17 @@ const LINKS = [
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/egecavusoglu",
+    icon: "/linkedin.svg",
   },
   {
     label: "GitHub",
     href: "https://github.com/egecavusoglu",
+    icon: "/github.svg",
   },
   {
     label: "Twitter",
     href: "https://twitter.com/egecavusoglu_",
+    icon: "/twitter.svg",
   },
 ];
 
