@@ -60,14 +60,14 @@ export default function Home() {
             <div className="mb-3" />
             Connect with me on...
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <section className="flex flex-wrap mt-6 gap-3">
             {LINKS.map((i) => (
-              <Item label={i.label} href={i.href} icon={i.icon} />
+              <Item key={i.label} label={i.label} href={i.href} icon={i.icon} />
             ))}
-          </div>
-          <div className="amk overflow-hidden w-full lg:w-4/5 self-center m-auto my-6 rounded-lg">
+          </section>
+          <section className="amk overflow-hidden w-full lg:w-4/5 self-center m-auto my-6 rounded-lg">
             <img src={"/intro.jpeg"} objectFit="fill" />
-          </div>
+          </section>
         </div>
       </main>
 
