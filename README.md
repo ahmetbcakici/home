@@ -1,6 +1,6 @@
 # Home
 
-My opinion on simple yet robust personal web sites. Feel free to experiment.
+My opinion on simple yet robust personal web sites. Feel free to experiment. Built with Next.js and Tailwind ❤️.
 
 ## Todos for me
 
