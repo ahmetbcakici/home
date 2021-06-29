@@ -36,7 +36,8 @@ export default function Home() {
           <div className="flex flex-row items-center gap-3">
             <code className="text-blue-400 text-lg">🌎 Hello World!</code>
             {/* <p className="text-gray-200 text-sm">from</p> */}
-            <div className=" rounded-full py-1 px-2 border-blue-400 bg-blue-500 border-2 my-2  bg-opacity-30 w-min whitespace-nowrap">
+            <div className=" rounded-full py-1 px-2 border-blue-400 bg-blue-500 border-2 my-2 flex flex-row gap-1  bg-opacity-30 w-min whitespace-nowrap items-center">
+              <span className="text-base">📍</span>
               <p className="text-gray-200 text-xs">Seattle, WA</p>
             </div>
           </div>
