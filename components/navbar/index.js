@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import logo from "public/logo_nobg.svg";
 
 const LINKS = [
   {
@@ -39,15 +37,19 @@ const Navbar = (props) => {
   };
 
   return (
-    <nav className="max-w-2xl w-full  px-2 py-2 my-3 flex flex-col sm:flex-row  md:items-center gap-5">
-      <button onClick={() => setOpen((o) => !o)} className="h-min">
-        <Image src={logo} height={24} width={36} />
-      </button>
+    <nav className="max-w-2xl w-full  px-2 py-2 my-1 flex flex-col sm:flex-row  md:items-center gap-5">
+      <div className="flex flex-row justify-between border-0 border-red-200">
+        <button onClick={() => setOpen((o) => !o)} className="h-min">
+          <Hamburger />
+        </button>
+        <Logo />
+        <div className="h-7 w-7 sm:hidden" />
+      </div>
       <div className="hidden sm:flex gap-4">
         <NavItems />
       </div>
       {open && (
-        <div className={`flex flex-col gap-3 px-1 transition-all sm:hidden`}>
+        <div className={`flex flex-col gap-3 px-1 pb-3 sm:hidden`}>
           <NavItems />
         </div>
       )}
@@ -73,5 +75,39 @@ const NavItem = ({ label, href = "", unavailable, onClicked }) => {
         {label}
       </a>
     </Link>
+  );
+};
+
+const Logo = () => {
+  return (
+    <Link href={"/"}>
+      <a>
+        <img
+          src={"/logo_nobg.svg"}
+          height={24}
+          width={32}
+          class="self-center"
+        />
+      </a>
+    </Link>
+  );
+};
+
+const Hamburger = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-7 w-7 text-gray-200 sm:hidden"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M4 6h16M4 12h16M4 18h16"
+      />
+    </svg>
   );
 };
