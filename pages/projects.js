@@ -70,7 +70,7 @@ const Projects = (props) => {
             <div className="mb-3" />
             Here are some of my notable projects...
           </p>
-          <div className="py-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-start">
+          <div className="py-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-start ">
             {PROJECTS.map((p) => (
               <Project key={p.href} data={p} />
             ))}
@@ -87,7 +87,7 @@ export default Projects;
 const Project = ({ data }) => {
   const { title, desc, href, photo = "", position } = data;
   return (
-    <div className="bg-gray-990 shadow-md hover:scale-101 transition w-11/12  min-h-64 rounded-md pb-1 overflow-hidden  mb-1">
+    <div className="bg-gray-990 shadow-md hover:scale-101 transition w-11/12  min-h-64 rounded-md  overflow-hidden mx-auto">
       <div className="h-min  bg-gray-900 w-full">
         {photo && <img src={photo} className={`h-max-36 object-cover`} />}
       </div>
