@@ -66,7 +66,7 @@ const Projects = (props) => {
             I develop across a wide range of platforms, from web to mobile to EV
             chargers ⚡️. I am specialized in web applications, both client and
             server side, and have deployed multiple of them in production level.
-            My weapon of choice are JavaScript and TypeScript.
+            My weapons of choice are JavaScript and TypeScript.
             <div className="mb-3" />
             Here are some of my notable projects...
           </p>
