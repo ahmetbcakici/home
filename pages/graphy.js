@@ -27,7 +27,7 @@ const Graphy = (props) => {
       </Head>
       <main className="flex flex-col items-center  w-full flex-1  px-3 sm:px-10 lg:px-20 ">
         <Navbar />
-        <div className="w-full max-w-2xl py-4 px-2">
+        <div className="w-full max-w-3xl py-4 px-2">
           <code className="text-blue-400 text-lg">
             📸 Photography & Videography
           </code>
