@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Navbar from "components/navbar";
 import Footer from "components/footer";
-import { images } from "html-metadata-parser";
+import Shimmer from "components/shimmer";
 
 // Manage content here for ease of use.
 
@@ -57,7 +57,7 @@ const Projects = (props) => {
 
       <main className="flex flex-col items-center  w-full flex-1  px-3 sm:px-10 lg:px-20 ">
         <Navbar />
-        <div className="w-full max-w-3xl py-4 px-2">
+        <div className="w-full page-max-width py-4 px-2">
           <code className="text-blue-400 text-lg">🛠 Projects</code>
           <p className="text-gray-300 mt-3">
             I develop across a wide range of platforms, from web to mobile to EV
@@ -91,7 +91,8 @@ const Project = ({ data }) => {
     extractImageFromOg,
   } = data;
   const [imageSrc, setImageSrc] = useState(photo);
-
+  const [loading, setLoading] = useState(true);
+  const PHOTO_PLACEHOLDER_HEIGHT = imageSrc ? "" : "h-36";
   useEffect(() => {
     if (extractImageFromOg) crawlImage(href);
   }, []);
@@ -118,10 +119,17 @@ const Project = ({ data }) => {
 
   return (
     <div className="bg-gray-990 shadow-md hover:scale-101 transition w-11/12  min-h-64 rounded-md  overflow-hidden mx-auto">
-      <div className="h-min sm:max-h-48 bg-gray-900 w-full overflow-hidden">
+      <div
+        className={`h-min ${PHOTO_PLACEHOLDER_HEIGHT} sm:max-h-48 bg-gray-900 w-full relative overflow-hidden`}
+      >
         {imageSrc && (
-          <img src={imageSrc} className={`h-full w-full object-cover`} />
+          <img
+            onLoad={() => setLoading(false)}
+            src={imageSrc}
+            className={`h-full w-full object-cover`}
+          />
         )}
+        <Shimmer show={loading} />
       </div>
       <div className="p-2 text-gray-400">
         <ProjectLink label={title} href={href} />

@@ -32,7 +32,7 @@ export default function Home() {
 
       <main className="flex flex-col items-center  w-full flex-1  px-3 sm:px-10 lg:px-20 ">
         <Navbar />
-        <div className="w-full max-w-3xl py-4 px-2">
+        <div className="w-full page-max-width py-4 px-2">
           <div className="flex flex-row items-center gap-3">
             <code className="text-blue-400 text-lg">🌎 Hello World!</code>
             {/* <p className="text-gray-200 text-sm">from</p> */}
@@ -66,7 +66,7 @@ export default function Home() {
               <Item key={i.label} label={i.label} href={i.href} icon={i.icon} />
             ))}
           </section>
-          <section className="amk overflow-hidden w-full lg:w-4/5 self-center m-auto my-6 rounded-lg">
+          <section className="overflow-hidden w-full lg:w-4/5 self-center m-auto my-6 rounded-lg">
             <img src={"/intro.jpeg"} objectFit="fill" />
           </section>
         </div>
