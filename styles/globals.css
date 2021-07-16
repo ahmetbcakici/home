@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .page-max-width {
-  @apply max-w-6xl;
+  @apply max-w-3xl;
 }
 
 @keyframes shimmer {

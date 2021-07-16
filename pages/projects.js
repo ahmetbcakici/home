@@ -57,7 +57,7 @@ const Projects = (props) => {
 
       <main className="flex flex-col items-center  w-full flex-1  px-3 sm:px-10 lg:px-20 ">
         <Navbar />
-        <div className="w-full page-max-width py-4 px-2">
+        <div className="w-full max-w-5xl py-4 px-2">
           <code className="text-blue-400 text-lg">🛠 Projects</code>
           <p className="text-gray-300 mt-3">
             I develop across a wide range of platforms, from web to mobile to EV

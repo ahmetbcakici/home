@@ -17,7 +17,6 @@ const LINKS = [
   {
     label: "Blog",
     href: "/blog",
-    unavailable: true,
   },
 ];
 
@@ -37,7 +36,7 @@ const Navbar = (props) => {
   };
 
   return (
-    <nav className="page-max-width w-full  px-2 py-2 my-1 flex flex-col sm:flex-row  md:items-center gap-5">
+    <nav className="max-w-5xl w-full  px-2 py-2 my-1 flex flex-col sm:flex-row  md:items-center gap-5">
       <div className="flex flex-row justify-between border-0 border-red-200">
         <button onClick={() => setOpen((o) => !o)} className="h-min">
           <Hamburger />
