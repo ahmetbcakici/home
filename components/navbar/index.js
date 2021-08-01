@@ -18,6 +18,10 @@ const LINKS = [
     label: "Blog",
     href: "/blog",
   },
+  {
+    label: "Mentorship",
+    href: "/mentorship",
+  },
 ];
 
 const Navbar = (props) => {
