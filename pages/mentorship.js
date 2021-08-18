@@ -16,7 +16,7 @@ const Blog = (props) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-1000">
       <Head>
-        <title>Graphy | Ege</title>
+        <title>Mentorship | Ege</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex flex-col items-center  w-full flex-1  px-3 sm:px-10 lg:px-20 ">
