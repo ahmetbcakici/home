@@ -52,12 +52,7 @@ export default function Home() {
             </LinkText>{" "}
             studying Computer Science and loving it. I also develop software
             applications for the good and hope they scale to help more people
-            with their daily lives. Currently I am working as a Software
-            Engineer Intern at{" "}
-            <LinkText href="https://www.microsoft.com/en-us/">
-              Microsoft
-            </LinkText>
-            .
+            with their daily lives.
             <div className="mb-3" />
             Connect with me on...
           </p>
