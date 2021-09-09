@@ -38,7 +38,7 @@ export default function Home() {
             {/* <p className="text-gray-200 text-sm">from</p> */}
             <div className=" rounded-full py-1 px-2 border-blue-400 bg-blue-500 border-2 my-2 flex flex-row gap-1  bg-opacity-30 w-min whitespace-nowrap items-center">
               <span className="text-base">📍</span>
-              <p className="text-gray-200 text-xs">Seattle, WA</p>
+              <p className="text-gray-200 text-xs">St Louis, MO</p>
             </div>
           </div>
           <p className="text-gray-300 mt-3">
