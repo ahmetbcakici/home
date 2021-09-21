@@ -31,6 +31,7 @@ const Navbar = (props) => {
   const NavItems = () => {
     return LINKS.map((l) => (
       <NavItem
+        key={l.href}
         label={l.label}
         href={l.href}
         unavailable={l.unavailable}
