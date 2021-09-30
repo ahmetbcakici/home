@@ -4,7 +4,7 @@ export default function PostBody({ content }) {
   return (
     <div className="max-w-3xl mx-auto">
       <div
-        className={markdownStyles["markdown"]}
+        className={markdownStyles["markdown-body"]}
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </div>
