@@ -1,6 +1,6 @@
 ---
 title: "Why you should version you APIs?"
-excerpt: ""
+excerpt: "Do you remember ever seeing an API url like `my-api/api/v2`? Maybe the version of an API server might not make sense at all, since it is something we can change whenever we want. Let me tell you about my experience of how we leveraged API verisoning in production level software applications."
 coverImage: ""
 date: "September 29, 2021"
 author:
