@@ -19,8 +19,8 @@ const LINKS = [
     href: "/blog",
   },
   {
-    label: "Mentorship",
-    href: "/mentorship",
+    label: "Mentoring",
+    href: "/mentoring",
   },
 ];
 
