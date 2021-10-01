@@ -1,6 +1,6 @@
 ---
 title: "Why you should version you APIs?"
-excerpt: "Do you remember ever seeing an API url like `my-api/api/v2`? Maybe the version of an API server might not make sense at all, since it is something we can change whenever we want. Let me tell you about my experience of how we leveraged API verisoning in production level software applications."
+excerpt: "Do you remember ever seeing an API url like my-api.com/api/v2? Maybe the version of an API server might not make sense at all, since it is something we can change whenever we want. Let me tell you about my experience of how we leveraged API verisoning in production level software applications."
 coverImage: ""
 date: "September 29, 2021"
 author:
@@ -9,7 +9,7 @@ author:
 
 ###
 
-Do you remember ever seeing an API url like `my-api/api/v2`? Maybe the version of an API server might not make sense at all, since it is something we can change whenever we want. Let me tell you about my experience of how we leveraged API verisoning in production level software applications.
+Do you remember ever seeing an API url like `my-api.com/api/v2`? Maybe the version of an API server might not make sense at all, since it is something we can change whenever we want. Let me tell you about my experience of how we leveraged API verisoning in production level software applications.
 
 When building a class project or a personal project perhaps your main goal is to demo a minimum viable product. You can take down the site, or wipe a database to test according to your needs. You can deprecate endpoints, change the responses and so on. However one does not simply do that in a production environment. There are many cases to consider before changing:
 
@@ -46,7 +46,7 @@ Later, the backend team would like to run robust filtering on the hotels so deci
 }
 ```
 
-Do you see the problem here? We were accessing adress field with `data.adress` before, but now its `data.location.adress`. If the frontend does not adjust to the new schema of the API response problems might arise in the client side.
+Do you see the problem here? We were accessing adress field with `data.address` before, but now its `data.location.address`. If the frontend does not adjust to the new schema of the API response problems might arise in the client side.
 
 Secondly, it not always possible to make sure that every user of your app is using the latest version of your app. This becomes particularly difficult when your client side is mobile app that needs to be recompiled for each new version and provisioned by Apple and Google before launched to the users. It becomes challenging for the API to respond in accordance to the client side version.
 
